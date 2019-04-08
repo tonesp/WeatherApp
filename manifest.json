@@ -1,0 +1,7 @@
+{
+  "name": "weather",
+  "short_name": "weather",
+  "description": "test app",
+  "start_url": "/",
+  "display": "standalone"
+}
