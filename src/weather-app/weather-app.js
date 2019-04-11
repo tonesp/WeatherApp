@@ -31,8 +31,16 @@ class WeatherApp extends PolymerElement {
     var date = new Date(UnixDate*1000);
     var hours = date.getHours();
     var minutes = "0" + date.getMinutes();
-    var seconds = "0" + date.getSeconds();
-    var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    var formattedTime = hours + ':' + minutes.substr(-2)
+    return(formattedTime);
+  }
+  getLocalDateData(UnixDate){
+    var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];	
+    var date = new Date(UnixDate*1000);
+    var day = date.getDate();
+    var month = months_arr[date.getMonth()];
+    var year = date.getFullYear();
+    var formattedTime = day + '/' + month + "/" + year;
     return(formattedTime);
   }
 }

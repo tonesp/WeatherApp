@@ -50,7 +50,7 @@ export default `
                 <div class="divTableCell"><img src="http://openweathermap.org/img/w/[[data.weather.0.icon]].png"/>[[data.weather.0.description]]</div>
             </div>-->
             <div class="divTableRow">
-                <div class="divTableCell">Forecast</div>
+                <div class="divTableCellUp">Forecast</div>
                 <div class="divTableCell">
                     <iron-ajax auto
                         url="http://api.openweathermap.org/data/2.5/forecast?q={{route.path}}&APPID=54d121f6af892d1915cd75e20dec17f9&units=metric"
@@ -77,10 +77,10 @@ export default `
                                         <div class="divTableBody">
                                             <template is="dom-repeat" items="[[forecast.list]]">
                                                 <div class="divTableRow">
-                                                    <div class="divTableCell">[[item.dt_txt]]</div>
+                                                <div class="divTableCell">[[getLocalDateData(item.dt)]]</div>
                                                     <div class="divTableCell">[[item.main.temp]] °C</div>
                                                     <div class="divTableCell">[[item.main.humidity]] %</div>
-                                                    <div class="divTableCell"><img src="http://openweathermap.org/img/w/[[item.weather.0.icon]].png"/></div>
+                                                    <div class="divTableCell"><img src="http://openweathermap.org/img/w/[[item.weather.0.icon]].png" height="30" width="30"/></div>
                                                 </div>
                                             </template>
                                         </div>
