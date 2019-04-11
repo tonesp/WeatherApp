@@ -77,7 +77,7 @@ export default `
                                         <div class="divTableBody">
                                             <template is="dom-repeat" items="[[forecast.list]]">
                                                 <div class="divTableRow">
-                                                <div class="divTableCell">[[getLocalDateData(item.dt)]]</div>
+                                                <div class="divTableCell">[[getLocalDateData(item.dt)]] [[getLocalTimeData(item.dt)]]</div>
                                                     <div class="divTableCell">[[item.main.temp]] °C</div>
                                                     <div class="divTableCell">[[item.main.humidity]] %</div>
                                                     <div class="divTableCell"><img src="http://openweathermap.org/img/w/[[item.weather.0.icon]].png" height="30" width="30"/></div>
